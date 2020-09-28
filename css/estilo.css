@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+html,body	{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body div{
+	padding: 10px;
+	text-align: center;
+}
+
+div#barraTopo{
+	background-color: grey;
+}
+
+.btn-light{
+	color: green;
+}
+.btn-light:hover{
+	color: green;
+}
+
+.marcador{
+	border: 1px solid red; 
+}
+

@@ -1,0 +1,25 @@
+Inicio{
+escolhe Nome
+escolhe Classe
+}
+
+Nome = nome
+Ouro = ouro
+Classe = dá bonus em determinadas armas e atributos
+Nivel = soma de todos os atributos/10(rounded up)
+
+Agilidade = Ataques adicionais e esquiva de ataques
+Dano =  dano causado
+Defesa = dano mitigado
+Vitalidade = quantidade máxima de vida
+PV = pontos de vida
+
+
+
+Nome	Ouro:
+
+Classe	Nível	
+	
+Ataque	Agilidade
+
+Dano	Defesa
