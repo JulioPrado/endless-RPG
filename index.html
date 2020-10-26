@@ -25,91 +25,98 @@
 	<div class="mt-4" id="iniciado" >
 		
 		<div>
-			<button id="escondepersonagem" onclick="escondeDiv('personagem');" >[ – ] Personagem
+			<button id="escondepersonagem" class="btn btn-outline-primary w-100" style="display: none;" onclick="escondeDiv('personagem');" >[ – ] Personagem 
 			</button>
-			<button id="exibepersonagem" style="display: none;" onclick="exibeDiv('personagem');" >[ ✚ ] Personagem</button>
+			<button id="exibepersonagem" class="btn btn-primary w-100" onclick="exibeDiv('personagem');" >[ ✚ ] Personagem</button>
 		</div>
-		<div class="marcador" id="personagem">
+		<div id="personagem" style="display: none;">
 			
 
 		</div>
 
 		<div>
-			<button id="escondeestoqueAliados" style="display: none;" onclick="escondeDiv('estoqueAliados');" >[ – ] Estoque de Aliados
+			<button id="escondeestoqueAliados" style="display: none;" class="btn btn-outline-primary w-100" onclick="escondeDiv('estoqueAliados');" >[ – ] Estoque de Aliados
 			</button>
-			<button id="exibeestoqueAliados" onclick="exibeDiv('estoqueAliados');" >[ ✚ ] Estoque de Aliados</button>
+			<button id="exibeestoqueAliados" class="btn btn-primary w-100" onclick="exibeDiv('estoqueAliados');" >[ ✚ ] Estoque de Aliados</button>
 		</div>
 		<div style="display: none" id="estoqueAliados">
 			estoqueAliados
 		</div>
 
 		<div>
-			<button id="escondeequipamentos" style="display: none;" onclick="escondeDiv('equipamentos');" >[ – ] Equipamentos
+			<button id="escondeequipamentos" style="display: none;" class="btn btn-outline-primary w-100" onclick="escondeDiv('equipamentos');" >[ – ] Equipamentos
 			</button>
-			<button id="exibeequipamentos" onclick="exibeDiv('equipamentos');" >[ ✚ ] Equipamentos</button>
+			<button id="exibeequipamentos" class="btn btn-primary w-100" onclick="exibeDiv('equipamentos');" >[ ✚ ] Equipamentos</button>
 		</div>
 		<div style="display: none" id="equipamentos">
 			equipamentos
 		</div>
 
 		<div>
-			<button id="escondeestoqueItens" style="display: none;" onclick="escondeDiv('estoqueItens');" >[ – ] Estoque de Itens
+			<button id="escondeestoqueItens" style="display: none;" class="btn btn-outline-primary w-100" onclick="escondeDiv('estoqueItens');" >[ – ] Estoque de Itens
 			</button>
-			<button id="exibeestoqueItens" onclick="exibeDiv('estoqueItens');" >[ ✚ ] Estoque de Itens</button>
+			<button id="exibeestoqueItens" class="btn btn-primary w-100" onclick="exibeDiv('estoqueItens');" >[ ✚ ] Estoque de Itens</button>
 		</div>
 		<div style="display: none" id="estoqueItens">
 			estoqueItens
 		</div>
 
 		<div>
-			<button id="escondeloja" style="display: none;" onclick="escondeDiv('loja');" >[ – ] Loja
+			<button id="escondeloja" style="display: none;" class="btn btn-outline-primary w-100" onclick="escondeDiv('loja');" >[ – ] Loja
 			</button>
-			<button id="exibeloja" onclick="exibeDiv('loja');" >[ ✚ ] Loja</button>
+			<button id="exibeloja" class="btn btn-primary w-100" onclick="exibeDiv('loja');" >[ ✚ ] Loja</button>
 		</div>
 		<div style="display: none" id="loja">
 			loja
 		</div>
 		<div>
-			<button id="escondearena" onclick="escondeDiv('arena');" >[ – ] Arena
+			<button id="escondearena" style="display: none;" class="btn btn-outline-primary w-100" onclick="escondeDiv('arena');" >[ – ] Arena
 			</button>
-			<button id="exibearena" style="display: none;" onclick="exibeDiv('arena');" >[ ✚ ] Arena</button>
+			<button id="exibearena" class="btn btn-primary w-100" onclick="exibeDiv('arena');" >[ ✚ ] Arena</button>
 		</div>
-		<div class="marcador" id="arena">
+		<div class="marcador" id="arena" style="display: none;">
 			<h2>Arena</h2>
-
 			<form>
 				 <div class="form-group">
+					 <div id="opcVerbose" class="radio">
+					  <label>
+					  	<input type="radio" name="radio" value="padrao" checked>Luta automática
+					  </label>
+
+					  <label class="mx-3"><input type="radio"  name="radio" value="assist">Luta assistida</label>
+					</div>
 				    <label for="selectArena">Selecione um adversário:</label>
-				    <select class="form-control" id="selectArena">
-				      <option>Rato Nv1</option>
-				      <option>Rato Nv2</option>
-				      <option>Cervo Nv3</option>
-				      <option>Macaco Nv3</option>
-				      <option>Jacaré Nv4</option>
-				    </select>
+				   
+				   <div class="container">
+				   	<div class="row">
+				   		<div class="nvInimigo col-3">
+				   			Nv: 1
+				   		</div>
+				   		<div class="nomeInimigo col-6">
+				   			Rato
+				   		</div>
+				   		<div class="selecionaInimigo col-3">
+				   			<a href="javascript: testeArena()">
+								Lutar!
+							</a>
+				   		</div>
+				   	</div>
+				   </div>
+
+
 				  </div>
-				<div class="radio">
-				  <label>
-				  	<input type="radio" name="radio" checked>Luta automática
-				  </label>
-
-				  <label class="mx-3"><input type="radio" name="radio">Luta assistida</label>
-				</div>
-
-				<button class="btn btn-lg btn-danger">
-					Iniciar
-				</button>
-
 			</form>
 
-			</select>
+			<div id="logBatalha" style="display: none;">
+				
+			</div>
 
 		</div>
 
 		<div>
-			<button id="escondeconquistas" style="display: none;" onclick="escondeDiv('conquistas');" >[ – ] Conquistas
+			<button id="escondeconquistas" style="display: none;" class="btn btn-outline-primary w-100" onclick="escondeDiv('conquistas');" >[ – ] Conquistas
 			</button>
-			<button id="exibeconquistas" onclick="exibeDiv('conquistas');" >[ ✚ ] Conquistas</button>
+			<button id="exibeconquistas" class="btn btn-primary w-100" onclick="exibeDiv('conquistas');" >[ ✚ ] Conquistas</button>
 		</div>
 		<div style="display: none" id="conquistas">
 			Conquistas
